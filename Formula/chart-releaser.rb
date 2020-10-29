@@ -2,22 +2,22 @@
 class ChartReleaser < Formula
   desc "Hosting Helm Charts via GitHub Pages and Releases"
   homepage "https://github.com/helm/chart-releaser/"
-  version "1.0.0"
+  version "1.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/helm/chart-releaser/releases/download/v1.0.0/chart-releaser_1.0.0_darwin_amd64.tar.gz"
-    sha256 "d244ceff708a8d502db9e9b272a1a3d4a293539b40e5e5d6a35edeaa4d46f297"
+    url "https://github.com/helm/chart-releaser/releases/download/v1.1.0/chart-releaser_1.1.0_darwin_amd64.tar.gz"
+    sha256 "13f456954a69e06844a41305f06105c4700f1197df3bc82430e2845490441cd7"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.0.0/chart-releaser_1.0.0_linux_amd64.tar.gz"
-      sha256 "c2851f6268f7432450dce398d938083d002752e894a0a3ae6e9d4740e98a61c2"
+      url "https://github.com/helm/chart-releaser/releases/download/v1.1.0/chart-releaser_1.1.0_linux_amd64.tar.gz"
+      sha256 "f4d25f45773a1ec8b530e7f0eda942ab17cac162d4611dfa0fd03586074d1cde"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
       else
-        url "https://github.com/helm/chart-releaser/releases/download/v1.0.0/chart-releaser_1.0.0_linux_armv6.tar.gz"
-        sha256 "2acdcd24adbc79d5b0d8984ff68537db52d78c6ef46e33af264e5d901640213c"
+        url "https://github.com/helm/chart-releaser/releases/download/v1.1.0/chart-releaser_1.1.0_linux_armv6.tar.gz"
+        sha256 "94feb099e8cd71ba7b0356486a0269f27816916b9bc6327fe22b316756663764"
       end
     end
   end
