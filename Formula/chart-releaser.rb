@@ -22,7 +22,7 @@ class ChartReleaser < Formula
   end
 
   def install
-    bin.install "chart-releaser"
+    bin.install "cr"
   end
 
   test do
