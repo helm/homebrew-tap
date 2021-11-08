@@ -54,6 +54,6 @@ class ChartReleaser < Formula
   end
 
   test do
-    system "#{bin}/cr --version"
+    system "#{bin}/cr version"
   end
 end
