@@ -5,20 +5,20 @@
 class ChartReleaser < Formula
   desc "Hosting Helm Charts via GitHub Pages and Releases"
   homepage "https://github.com/helm/chart-releaser/"
-  version "1.4.0"
+  version "1.4.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.4.0/chart-releaser_1.4.0_darwin_arm64.tar.gz"
-      sha256 "c4183ebc4b7c021f333655ec934e7c374b61e1ad365665a683dcf46e6a336a49"
+    if Hardware::CPU.intel?
+      url "https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_darwin_amd64.tar.gz"
+      sha256 "c77ea224a2466d489c5e6950c84a3c9de6fc782e9daaef9eb30f5432bbb40e3a"
 
       def install
         bin.install "cr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.4.0/chart-releaser_1.4.0_darwin_amd64.tar.gz"
-      sha256 "e46675c0c80e6ecc0f4ea5d68602b94c3b9a1b1b251554819b54387336a1e177"
+    if Hardware::CPU.arm?
+      url "https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_darwin_arm64.tar.gz"
+      sha256 "1f27e113f317c5d3a47ca2ff2b488f9385d50a936699ffb857bd72a94b343c31"
 
       def install
         bin.install "cr"
@@ -28,16 +28,16 @@ class ChartReleaser < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.4.0/chart-releaser_1.4.0_linux_amd64.tar.gz"
-      sha256 "6449c52bc7568d6e345667a3ceea826db2ac04e7eec9a68b5c3b4673e21e5d6a"
+      url "https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_amd64.tar.gz"
+      sha256 "96607338be59ba35101e3d8ff8d8cd36db5289ccb992a00b9a161001e26774ae"
 
       def install
         bin.install "cr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.4.0/chart-releaser_1.4.0_linux_arm64.tar.gz"
-      sha256 "ae292eb6488b11bee6a6061683b719cce833900b4f20a5894ab921f39bc30bcb"
+      url "https://github.com/helm/chart-releaser/releases/download/v1.4.1/chart-releaser_1.4.1_linux_arm64.tar.gz"
+      sha256 "00e4ba36c8e01966f76025cbe0daf309ce3a3df7338c2009f2613c1214d40dd9"
 
       def install
         bin.install "cr"
