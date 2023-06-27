@@ -5,20 +5,20 @@
 class ChartReleaser < Formula
   desc "Hosting Helm Charts via GitHub Pages and Releases"
   homepage "https://github.com/helm/chart-releaser/"
-  version "1.5.0"
+  version "1.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.5.0/chart-releaser_1.5.0_darwin_amd64.tar.gz"
-      sha256 "5906a4e15c434f6b37878a3d55c82a60fa551940019af615ee8cbe6d8100efe9"
+      url "https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_darwin_amd64.tar.gz"
+      sha256 "6c3713aa51f0157d3dd7723042551c0a3dfd9c4225a5b91fb1bf0da1663ad2bf"
 
       def install
         bin.install "cr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.5.0/chart-releaser_1.5.0_darwin_arm64.tar.gz"
-      sha256 "7330d991335529bd7a41bfdd86e69ed5938d4bb552b26b3c7adfa1b07afb264e"
+      url "https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_darwin_arm64.tar.gz"
+      sha256 "9e6b48c7bfeb2ede9a01354d9234ba9ea9c227ae32fa335a801d42e6a3962619"
 
       def install
         bin.install "cr"
@@ -27,17 +27,17 @@ class ChartReleaser < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.5.0/chart-releaser_1.5.0_linux_arm64.tar.gz"
-      sha256 "952010d7893887a22ed641e6adf85529a8377be179a6e79bd791b68679bdea04"
+    if Hardware::CPU.intel?
+      url "https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_linux_amd64.tar.gz"
+      sha256 "c8bb71abd84cf0e569f62efe6b9a4b3974d337129f5f4c72c7dd2d17efb4ab20"
 
       def install
         bin.install "cr"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/helm/chart-releaser/releases/download/v1.5.0/chart-releaser_1.5.0_linux_amd64.tar.gz"
-      sha256 "e1a1fd93f4773b3795e790ec5e305ea1af21f556f9b982edb261b60902e469d7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/helm/chart-releaser/releases/download/v1.6.0/chart-releaser_1.6.0_linux_arm64.tar.gz"
+      sha256 "e9f00caf2555046b0dd0c3ffe571f23382b365150fb4d1dc19fe4cc10618823a"
 
       def install
         bin.install "cr"
