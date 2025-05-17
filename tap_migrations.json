@@ -1,3 +1,4 @@
 {
+    "chart-releaser": "homebrew/core",
     "chart-testing": "homebrew/core"
 }
